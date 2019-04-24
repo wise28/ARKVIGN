@@ -1,0 +1,88 @@
+.introduce__form {
+  max-width: 575px;
+  &-label {
+    font-family: $font_family_din_pro;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    position: relative;
+    margin-top: 70px;
+    display: block;
+    @include media-breakpoint-down(sm) {
+      margin-left: 60px;
+      margin-right: 20px;
+    }
+    .number-input {
+      position: absolute;
+      left: -90px;
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      border-radius: 32px;
+      top: -23px;
+      padding: 20px 26px 20px 26px;
+
+      font-family: $font_family_roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: normal;
+      text-align: center;
+      color: #F47821;
+
+      @include media-breakpoint-down(sm) {
+        top: -10px;
+        padding: 10px 16px 10px 16px;
+        left: -50px;
+      }
+
+    }
+  }
+  &-input {
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid #F7F8FA;
+    height: 80px;
+    color: #fff;
+    resize: none;
+    &:focus {
+      border: none;
+      border-bottom: 2px solid #F7F8FA;
+    }
+    @include placeholder {
+      font-family: $font_family_roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 35px;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      opacity: 0.1;
+      width: 100%;
+      display: block;
+    }
+  }
+  &-button {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 111px;
+    border: none;
+    font-family: $font_family_gilroy;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    color: $main_color;
+    font-weight: 600;
+    margin-top: 75px;
+    cursor: pointer;
+    @include links(#b34a00, #b34a00, $main_color, #b34a00, rgba(247, 248, 249, 0.8));
+    @include media-breakpoint-down(sm) {
+      margin-left: 40px;
+      width: 83%;
+    }
+  }
+}

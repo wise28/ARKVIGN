@@ -1,0 +1,42 @@
+.little-button-fill-form {
+  font-family: $font_family_gilroy;
+  font-size: $font_size_main;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #222222;
+  padding-top: 19px;
+  padding-left: 52px;
+  text-decoration: none;
+  font-weight: 600;
+  padding-right: 20px;
+  cursor: pointer;
+  @include pseudo;
+  &:after {
+    content: none;
+  }
+  &:before {
+    width: 14px;
+    height: 14px;
+    color: $main_color;
+    background: rgba(135, 135, 135, 0.05);
+    border-radius: 111px;
+    padding: 28px;
+    left: 0;
+    top: 0;
+  }
+  &:hover::before {
+    animation: grow 1s forwards;
+  }
+  @keyframes grow {
+    100% {
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &:before {
+      top: -9px;
+    }
+    padding-top: 10px;
+  }
+}
